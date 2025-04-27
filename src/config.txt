@@ -1,0 +1,105 @@
+Manual do Sistema de Estruturas de Dados
+
+Este sistema permite que você execute comandos em diferentes estruturas de dados ( Árvore Binaria, Lista Encadeada, Fila Dinamica e Pilha Dinamica). Os dados podem ser tratados de forma generica com a declaração do tipo T(podendo ser  como string ou int).
+Abaixo está o manual de como utilizar o sistema corretamente:
+
+
+1. Escolha da Estrutura de Dados
+
+Antes de começar a usar o sistema, você precisa escolher qual estrutura de dados será utilizada.
+
+Como escolher a estrutura de dados:
+
+- Árvore Binária: Para usar uma árvore binária, digite ARVORE na primeira linha do arquivo.
+- Lista Encadeada Dupla: Para usar uma lista encadeada dupla, digite LISTA.
+- Pilha Dinâmica de Busca: Para usar uma pilha dinâmica de busca, digite PILHA.
+- Fila Dinâmica de Busca: Para usar uma fila dinâmica de busca, digite FILA.
+
+Exemplo:
+
+- Para usar Árvore Binária :
+  ARVORE;
+
+- Para usar Lista Encadeada Dupla :
+  LISTA;
+
+
+2. Comandos
+
+Os comandos podem ser dados no arquivo de texto exec.txt, cada comando deve ser colocado em uma nova linha.
+A seguir estão os comandos disponíveis:
+
+INSERIR
+
+Esse comando insere um novo item na estrutura de dados. O formato do comando é:
+
+INSERIR;[posição];[Nome];[Idade];[Bairro]
+
+Exemplo:
+INSERIR;6;João;25;Centro
+
+---------------------------------------------------------------------------
+BUSCAR
+
+Este comando busca um item na estrutura de dados. O formato do comando é:
+
+BUSCAR;[Posição]
+
+----------------------------------------------------------------------------
+REMOVER
+
+Este comando remove um item da estrutura de dados. O formato do comando é:
+
+REMOVER;[Posição];
+
+Exemplo:
+REMOVER;2
+
+---------------------------------------------------------------------------
+
+IMPRIMIR
+
+Este comando imprime a estrutura de dados atual, ou seja, todos os itens inseridos até o momento.
+O formato do comando é:
+
+IMPRIMIR;
+
+Não há necessidade de adicionar dados após o comando. Apenas escreva o comando e o sistema imprimirá a estrutura.
+
+Exemplo:
+
+- Imprimir todos os itens da estrutura de dados:
+  IMPRIMIR;
+
+----------------------------------------------------------------------------
+
+3. Exemplo Completo de Arquivo exec.txt
+
+Aqui está um exemplo de como um arquivo exec.txt pode ser estruturado:
+
+PILHA;
+INSERIR;6;João;25;Centro
+INSERIR;5;Maria;30;Bairro A
+IMPRIMIR
+BUSCAR;2
+REMOVER;2
+IMPRIMIR
+
+Explicação do exemplo:
+
+1. A estrutura de dados escolhida é Pilha.
+2. São inseridos o elemento com a posição, nome, numero e bairro.
+3. O comando de busca procura pelo elemento de posição 2.
+4. O comando de remoção remove o elemento 2.
+5. O comando de impressão mostra a estrutura de dados após a inserção e remoção.
+
+-------------------------------------------------------------------------------
+
+4. Observações Importantes
+
+- Ordem dos Comandos: Os comandos devem ser dados na ordem correta. Após escolher a estrutura de dados, você pode inserir, buscar, remover ou imprimir os dados conforme necessário.
+
+
+5. Conclusão
+
+Este manual deve fornecer uma maneira fácil e direta de interagir com as estruturas de dados disponíveis. A estrutura e os comandos são projetados para serem simples e intuitivos, permitindo que você insira, busque, remova e imprima os dados sem dificuldades.
