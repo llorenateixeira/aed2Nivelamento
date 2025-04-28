@@ -37,7 +37,6 @@ public class FilaDinamica<T extends Elemento> extends EstruturaDeDados<T> {
         }
         System.out.println("Dado não encontrado na fila.");
     }
-
     @Override
     public void remover(int pos) {
         if (inicio == null) {
@@ -46,62 +45,67 @@ public class FilaDinamica<T extends Elemento> extends EstruturaDeDados<T> {
         }
 
         Nodo<T> atual = inicio;
-        int contador = 0;
+        int contador = 0;  // Para contar as posições da fila
 
+        // Remover todos os itens até o item com a posição especificada (inclusive o item da posição)
         while (atual != null && atual.getDado().getPos() != pos) {
             T dadoRemovido = atual.getDado();
 
+            // Se estamos removendo o primeiro elemento
             if (atual == inicio) {
-                inicio = inicio.getDir();
-                if (inicio == null) {
+                inicio = inicio.getDir();  // Avança o início da fila
+                if (inicio == null) {  // Se a fila ficou vazia, também limpa o fim
                     fim = null;
                 } else {
-                    inicio.setEsq(null);
+                    inicio.setEsq(null);  // Desvincula o ponteiro anterior do novo primeiro item
                 }
             } else {
+                // Caso contrário, remove o item no meio ou final da fila
                 Nodo<T> anterior = atual.getEsq();
                 Nodo<T> proximo = atual.getDir();
                 if (anterior != null) {
-                    anterior.setDir(proximo);
+                    anterior.setDir(proximo);  // Atualiza o próximo do anterior
                 }
                 if (proximo != null) {
-                    proximo.setEsq(anterior);
+                    proximo.setEsq(anterior);  // Atualiza o anterior do próximo
                 }
-                if (proximo == null) {
-                    fim = anterior;
+                if (proximo == null) {  // Se for o último item da fila
+                    fim = anterior;  // Atualiza o ponteiro fim
                 }
             }
 
-            System.out.println("Dado Removido: " + dadoRemovido);
-            atual = atual.getDir();
-            contador++;
+            System.out.println("Dado Removido: " + dadoRemovido);  // Imprime o dado removido
+            atual = atual.getDir();  // Avança para o próximo nó
         }
 
+        // Se encontramos o elemento com a posição igual ao fornecido, removemos ele também
         if (atual != null && atual.getDado().getPos() == pos) {
             T dadoRemovido = atual.getDado();
 
+            // Se estamos removendo o primeiro elemento
             if (atual == inicio) {
-                inicio = inicio.getDir();
-                if (inicio == null) {
+                inicio = inicio.getDir();  // Avança o início da fila
+                if (inicio == null) {  // Se a fila ficou vazia, também limpa o fim
                     fim = null;
                 } else {
-                    inicio.setEsq(null);
+                    inicio.setEsq(null);  // Desvincula o ponteiro anterior do novo primeiro item
                 }
             } else {
+                // Caso contrário, remove o item no meio ou final da fila
                 Nodo<T> anterior = atual.getEsq();
                 Nodo<T> proximo = atual.getDir();
                 if (anterior != null) {
-                    anterior.setDir(proximo);
+                    anterior.setDir(proximo);  // Atualiza o próximo do anterior
                 }
                 if (proximo != null) {
-                    proximo.setEsq(anterior);
+                    proximo.setEsq(anterior);  // Atualiza o anterior do próximo
                 }
-                if (proximo == null) {
-                    fim = anterior;
+                if (proximo == null) {  // Se for o último item da fila
+                    fim = anterior;  // Atualiza o ponteiro fim
                 }
             }
 
-            System.out.println("Dado Removido: " + dadoRemovido);
+            System.out.println("Dado Removido: " + dadoRemovido);  // Imprime o dado removido
         } else {
             System.out.println("Elemento com a posição " + pos + " não encontrado.");
         }

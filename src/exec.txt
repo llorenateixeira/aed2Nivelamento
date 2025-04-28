@@ -1,4 +1,4 @@
-PILHA;
+LISTA;
 INSERIR;6;João;25;Centro
 INSERIR;5;Maria;30;Bairro A
 IMPRIMIR

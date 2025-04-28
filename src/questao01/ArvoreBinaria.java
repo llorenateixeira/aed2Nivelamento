@@ -72,6 +72,9 @@ public class ArvoreBinaria <T extends Elemento >  extends EstruturaDeDados<T> {
         } else if (pos > nodo.getDado().getPos()) {
             nodo.setDir(removerRecursivamente(nodo.getDir(), pos));
         } else {
+            // Encontrou o nó a ser removido
+            System.out.println("Dado Removido: " + nodo.getDado());  // Imprime o dado removido
+
             if (nodo.getEsq() == null) {
                 return nodo.getDir();
             } else if (nodo.getDir() == null) {
@@ -86,6 +89,7 @@ public class ArvoreBinaria <T extends Elemento >  extends EstruturaDeDados<T> {
         nodo.setTamanhoSubArvore(1 + tamanhoSubArvore(nodo.getDir()) + tamanhoSubArvore(nodo.getEsq()));
         return nodo;
     }
+
 
     private Nodo<T> encontrarMenorValor(Nodo<T> nodo) {
         if (nodo.getEsq() == null) {

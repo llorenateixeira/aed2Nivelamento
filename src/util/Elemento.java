@@ -1,13 +1,12 @@
 package util;
 
 public class Elemento {
-    private int numero;
     private String nome;
     private String bairro;
     private int pos;
     private int idade;
 
-    // Construtor para Elemento com todos os campos
+    // Construtor com parâmetros
     public Elemento(String nome, String bairro, int pos, int idade) {
         this.nome = nome;
         this.bairro = bairro;
@@ -15,12 +14,6 @@ public class Elemento {
         this.idade = idade;
     }
 
-    // Construtor para Elemento com número
-    public Elemento(int numero) {
-        this.numero = numero;
-    }
-
-    // Getters
     public String getNome() {
         return nome;
     }
@@ -37,13 +30,14 @@ public class Elemento {
         return idade;
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    // toString para imprimir os dados do Elemento
     @Override
     public String toString() {
-        return Integer.toString(numero);  // Apenas imprimindo o número (ou "pos" se você quiser customizar)
+        return "Elemento{" +
+                "nome='" + nome + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", pos=" + pos +
+                ", idade=" + idade +
+                '}';
     }
 }
+
