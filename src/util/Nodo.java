@@ -1,12 +1,12 @@
 package util;
 
 public class Nodo<T> {
-    private T dado;           // Armazena o dado do tipo T
-    private Nodo<T> dir;      // Referência para o próximo Nodo (direita)
-    private Nodo<T> esq;      // Referência para o Nodo anterior (esquerda)
+    private T dado;
+    private Nodo<T> dir;
+    private Nodo<T> esq;
     private int tamanhoSubArvore;
 
-    // Construtor do Nodo com dado, direções e tamanho da subárvore
+
     public Nodo(T dado, Nodo<T> dir, Nodo<T> esq, int tamanhoSubArvore) {
         this.dado = dado;
         this.dir = dir;
@@ -14,12 +14,12 @@ public class Nodo<T> {
         this.tamanhoSubArvore = tamanhoSubArvore;
     }
 
-    // Construtor simplificado
+
     public Nodo(T dado, Nodo<T> dir, Nodo<T> esq) {
         this(dado, dir, esq, 0);
     }
 
-    // Getter e Setter para 'dado'
+
     public T getDado() {
         return dado;
     }
@@ -28,7 +28,7 @@ public class Nodo<T> {
         this.dado = dado;
     }
 
-    // Getters e Setters para os nós da árvore
+
     public Nodo<T> getDir() {
         return dir;
     }

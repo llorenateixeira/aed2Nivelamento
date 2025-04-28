@@ -22,11 +22,7 @@ public class LeituraDeArquivos {
 
             String estrutura = partes[0].trim();
 
-            if (partes.length > 1) {
-                String configuracaoExtra = partes[1].trim();
-            }
-
-            EstruturaDeDados estruturaEscolhida = null;
+            EstruturaDeDados estruturaEscolhida;
 
             switch (estrutura) {
                 case "LISTA":
