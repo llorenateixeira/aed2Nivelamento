@@ -1,6 +1,6 @@
 Manual do Sistema de Estruturas de Dados
 
-Este sistema permite que você execute comandos em diferentes estruturas de dados ( Árvore Binaria, Lista Encadeada, Fila Dinamica e Pilha Dinamica). Os dados podem ser tratados de forma generica com a declaração do tipo T(podendo ser  como string ou int).
+Este sistema permite que você execute comandos em diferentes estruturas de dados ( Árvore Binaria, Lista Encadeada, Fila Dinamica e Pilha Dinamica).Os dados devem ser inseridos a partir de um onjeto chamado Elemento.
 Abaixo está o manual de como utilizar o sistema corretamente:
 
 
